@@ -23,3 +23,6 @@ src/
 ├── dao/        # Gestion des accès à la base de données
 ├── views/      # Contrôleurs et interfaces FXML
 └── Main.java   # Point d'entrée de l'application
+
+lien de dépot
+https://github.com/NORAel-fettouchi/gestion-clinique-javafx.git
