@@ -25,5 +25,4 @@ src/
 └── Main.java   # Point d'entrée de l'application
 
 
-## 🔗 Lien du projet
- [Gestion Clinique JavaFX - GitHub](https://github.com/NORAel-fettouchi/gestion-clinique.git)
+
