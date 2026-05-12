@@ -24,5 +24,5 @@ src/
 ├── views/      # Contrôleurs et interfaces FXML
 └── Main.java   # Point d'entrée de l'application
 
-lien de dépot
-https://github.com/NORAel-fettouchi/gestion-clinique-javafx.git
+## 🔗 Lien du projet
+ https://github.com/NORAel-fettouchi/gestion-clinique.git
