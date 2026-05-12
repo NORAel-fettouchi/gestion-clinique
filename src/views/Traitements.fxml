@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.TraitementController" prefWidth="700" prefHeight="500"
+      stylesheets="@../design/TblTraitement.css" >
+    <Label text="Mes traitements" style="-fx-font-weight: bold; -fx-font-size: 18px;"/>
+
+    <TableView fx:id="tableTraitement" prefHeight="300" prefWidth="680">
+        <columns>
+            <TableColumn fx:id="colID" text="Id" prefWidth="40"/>
+            <TableColumn fx:id="coluPatient" text="Patient" prefWidth="150"/>
+            <TableColumn fx:id="colNom" text="Nom" prefWidth="150"/>
+            <TableColumn fx:id="colType" text="Type" prefWidth="150"/>
+            <TableColumn fx:id="colDescription" text="Description" prefWidth="350"/>
+            <TableColumn fx:id="colDebut" text="Date Début" prefWidth="160"/>
+            <TableColumn fx:id="colFin" text="Date Fin" prefWidth="160"/>
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="130"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="txtNom" promptText="Nom du traitement" prefWidth="160"/>
+        <TextField fx:id="txtType" promptText="Type" prefWidth="130"/>
+        <TextField fx:id="txtDescription" promptText="Description" prefWidth="150"/>
+        <DatePicker fx:id="dateDebut" promptText="Début(YYYY-MM-DD)" prefWidth="220"/>
+        <DatePicker fx:id="dateFin" promptText="Fin(YYYY-MM-DD)" prefWidth="220"/>
+        <TextField fx:id="txtPatientId" promptText="ID Patient" prefWidth="90"/>
+        <Button fx:id="btnAjouterTraitement" text="Ajouter" onAction="#ajouterTraitement"/>
+    </HBox>
+
+</VBox>

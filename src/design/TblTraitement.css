@@ -1,0 +1,105 @@
+/* ============================
+   STYLE TABLEAU DES TRAITEMENTS
+   ============================ */
+
+/* Fond général du TableView */
+.table-view {
+    -fx-background-color: #f0f4f9;
+    -fx-border-color: #2980b9;
+    -fx-border-width: 2px;
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-size: 15px;
+    -fx-text-fill: black;
+}
+
+/* En-têtes de colonnes */
+.table-column-header {
+    -fx-background-color: linear-gradient(to bottom, #3498db, #2980b9);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent transparent #2980b9 transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* Lignes paires */
+.table-row-cell:filled:even {
+    -fx-background-color: #d6eaff;
+}
+
+/* Lignes impaires */
+.table-row-cell:filled:odd {
+    -fx-background-color: #ffffff;
+}
+
+/* Ligne sélectionnée */
+.table-row-cell:selected {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+}
+
+/* Cellules */
+.table-cell {
+    -fx-padding: 10px 15px;
+    -fx-text-fill: black;
+}
+
+/* Effet au survol des lignes */
+.table-row-cell:hover {
+    -fx-background-color: #85c1e9;
+    -fx-cursor: hand;
+}
+
+/* Scrollbar stylisée */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #3498db;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* ===================
+   STYLE DES BOUTONS
+   =================== */
+
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 5 15 5 15;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* ===============================
+   STYLE POUR LES CHAMPS D'ENTRÉE
+   =============================== */
+
+.date-picker,
+.combo-box,
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #2980b9;
+    -fx-border-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+}
+
+.date-picker:focused,
+.combo-box:focused,
+.text-field:focused {
+    -fx-border-color: #3498db;
+    -fx-effect: dropshadow(three-pass-box, #85c1e9, 5, 0, 0, 0);
+}

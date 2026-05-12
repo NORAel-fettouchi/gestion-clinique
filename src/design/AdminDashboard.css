@@ -1,0 +1,221 @@
+/* ======== Styles généraux ======== */
+* {
+    -fx-font-family: "Arial";
+}
+
+/* ======== Barre latérale ======== */
+.sidebar {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 20;
+}
+
+.logo {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-padding: 10 0 10 0;
+}
+
+.user-icon {
+    -fx-fill: #4285f4;
+}
+
+.user-initial {
+    -fx-font-size: 11px;
+    -fx-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+.user-initial1 {
+    -fx-font-size: 11px;
+    -fx-fill: white;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+
+.user-info {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.feature-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 8 12;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+}
+
+.feature-item:hover {
+    -fx-background-color: #34495e;
+}
+
+/* ======== Barre supérieure ======== */
+.header {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 10 20;
+}
+
+.welcome-text {
+    -fx-font-size: 14px;
+}
+
+.status-indicator {
+    -fx-fill: #2ecc71;
+    -fx-margin-right: 5;
+}
+
+.user-status {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7f8c8d;
+    -fx-padding: 0 10;
+}
+
+.logout-btn {
+    -fx-background-color: #ea4d3d;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 6 12;
+    -fx-background-radius: 5;
+}
+
+.logout-btn:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* ======== Contenu principal ======== */
+.main-content {
+    -fx-padding: 20;
+    -fx-background-color: #f8f9fa;
+}
+
+.page-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* ======== Statistiques (cartes) ======== */
+.dashboard-stats {
+    -fx-spacing: 20;
+}
+
+.stat-card {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 8, 0.1, 0, 4);
+}
+
+.stat-title {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 14px;
+}
+
+
+.stat-value {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+/* ======== TableView (tableaux) ======== */
+.appointment-table {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 8;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+}
+
+.table-view {
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #3498db;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 40px;
+    -fx-border-color: transparent;
+}
+
+.table-view .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 4 10;
+}
+
+.table-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* ======== Pastilles de statut ======== */
+.label.status-confirmed {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-padding: 4 8;
+    -fx-background-radius: 5;
+}
+
+.label.status-actif {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-padding: 4 8;
+    -fx-background-radius: 5;
+}
+.page-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+/* Ajoutez ces styles à votre fichier CSS */
+.table-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-alignment: center;
+    -fx-content-display: center;
+    -fx-padding: 0px 0px 0px 100px;
+}
+
+.table-button .image-view {
+    -fx-alignment: center;
+
+}
+/* Style pour l'en-tête du tableau */
+.table-view .column-header-background {
+    -fx-background-color: #3e78b2; /* Couleur bleue comme dans votre exemple */
+    -fx-background-radius: 5px 5px 0 0; /* Coins arrondis en haut */
+}
+
+/* Style pour chaque en-tête de colonne */
+.table-view .column-header {
+    -fx-background-color: transparent; /* Transparent pour laisser voir le fond */
+    -fx-text-fill: white; /* Couleur du texte */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 12 15 12 15; /* Espacement intérieur */
+}
+
+/* Style pour le "filler" (espace vide à droite) */
+.table-view .filler {
+    -fx-background-color: #3e78b2; /* Même couleur que le header */
+}
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #4a8bc9, #3e78b2);
+    -fx-border-color: #2c5a8a;
+    -fx-border-width: 0 0 1 0;
+}

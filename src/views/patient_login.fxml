@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.PatientLoginController"
+            prefWidth="330" prefHeight="550" stylesheets="@../design/designAdminLogin.css"
+            styleClass="white-bg">
+    <children>
+
+        <Button layoutX="10" layoutY="10" onAction="#retourAccueil" style="-fx-background-color: transparent; -fx-padding: 0; -fx-border-width: 0;">
+            <graphic>
+                <ImageView fitHeight="16" fitWidth="16">
+                    <image>
+                        <Image url="/utils/icons/retour.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <FontAwesomeIconView glyphName="USER" size="5em" layoutX="140.0" layoutY="90.0" fill="#188ba7" />
+
+        <Label layoutX="100.0" layoutY="100.0" text="Patient Login" textFill="#188ba7">
+            <font>
+                <Font name="Tahoma" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="130.0" layoutY="125.0" text="Access Portal" />
+
+        <TextField fx:id="patientFullName" layoutX="40.0" layoutY="200.0"
+                   prefHeight="30.0" prefWidth="250.0" styleClass="textfield-1" promptText="Full Name" />
+
+        <Button fx:id="patient_loginBtn" layoutX="40.0" layoutY="250.0"
+                prefHeight="40.0" prefWidth="250.0" text="Login"
+                styleClass="btn-1" onAction="#loginPatient" />
+    </children>
+</AnchorPane>

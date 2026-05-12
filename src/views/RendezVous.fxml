@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.RendezController" prefWidth="650" prefHeight="500"
+      stylesheets="@../design/TablRDV.css">
+    <Label text="  Mes Rendez_vous" style="-fx-font-weight: bold; -fx-font-size: 18px;"/>
+
+    <TableView fx:id="tableRdv" prefHeight="400" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="Id" text="id" prefWidth="204"/>
+            <TableColumn fx:id="colPatient" text="Patient" prefWidth="255"/>
+            <TableColumn fx:id="colDate" text="Date" prefWidth="255"/>
+            <TableColumn fx:id="colStatut" text="Statut" prefWidth="255"/>
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="255"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <DatePicker fx:id="datePickerRdv" promptText="Date (YYYY-MM-DD)" prefWidth="220"/>
+        <ComboBox fx:id="comboStatut" promptText="Statut" prefWidth="150"/>
+        <TextField fx:id="txtPatientId" promptText="ID Patient" prefWidth="100"/>
+        <Button fx:id="btnAjouter" text="Ajouter" onAction="#ajouterRendezVous"/>
+    </HBox>
+</VBox>

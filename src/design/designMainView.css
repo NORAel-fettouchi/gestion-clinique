@@ -1,0 +1,21 @@
+.white-bg {
+    -fx-background-color: #ffffff;
+}
+
+.btn-1 {
+    -fx-background-color: #188ba7;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.radius {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+.title-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #188ba7;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 0;
+}

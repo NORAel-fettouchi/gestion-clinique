@@ -1,0 +1,76 @@
+/* Style général de la table */
+.table-view {
+    -fx-background-color: #f0f4f9; /* fond très clair bleu */
+    -fx-border-color: #2980b9; /* bleu foncé */
+    -fx-border-width: 2px;
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-size: 15px;
+    -fx-text-fill: black;
+}
+
+/* Header des colonnes */
+.table-column-header {
+    -fx-background-color: linear-gradient(to bottom, #3498db, #2980b9);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent transparent #2980b9 transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* Lignes paires */
+.table-row-cell:filled:even {
+    -fx-background-color: #d6eaff; /* bleu clair */
+}
+
+/* Lignes impaires */
+.table-row-cell:filled:odd {
+    -fx-background-color: #ffffff; /* blanc */
+}
+
+/* Ligne sélectionnée */
+.table-row-cell:selected {
+    -fx-background-color: #2980b9; /* bleu foncé */
+    -fx-text-fill: white;
+}
+
+/* Cellules */
+.table-cell {
+    -fx-padding: 10px 15px;
+    -fx-text-fill: black;
+}
+
+/* Hover sur les lignes */
+.table-row-cell:hover {
+    -fx-background-color: #85c1e9; /* bleu moyen */
+    -fx-cursor: hand;
+}
+
+/* Scrollbar stylisée */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #3498db;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Boutons dans la table (si tu en ajoutes) */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 5 15 5 15;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.StatistiquesController">
+
+    <top>
+        <HBox spacing="20" style="-fx-background-color: #2c3e50;">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label text="Statistiques Globales" style="-fx-text-fill: white; -fx-font-size: 20px;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Totaux -->
+            <HBox spacing="40">
+                <VBox spacing="10" style="-fx-background-color: #3498db; -fx-padding: 20; -fx-background-radius: 10;">
+                    <Label text="Nombre total de patients" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                    <Label fx:id="lblTotalPatients" text="0" style="-fx-text-fill: white; -fx-font-size: 24px;"/>
+                </VBox>
+
+                <VBox spacing="10" style="-fx-background-color: #e67e22; -fx-padding: 20; -fx-background-radius: 10;">
+                    <Label text="Nombre total de rendez-vous" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                    <Label fx:id="lblTotalRendezVous" text="0" style="-fx-text-fill: white; -fx-font-size: 24px;"/>
+                </VBox>
+            </HBox>
+
+            <!-- BarChart Traitements -->
+            <VBox spacing="10">
+                <Label text="Statistiques par type de traitement" style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+                <BarChart fx:id="barChartTraitements" prefHeight="300" prefWidth="600" title="Nombre de traitements par type">
+                    <xAxis>
+                        <CategoryAxis label="Type de traitement"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Nombre"/>
+                    </yAxis>
+                </BarChart>
+            </VBox>
+
+            <!-- PieChart Rendez-vous -->
+            <VBox spacing="10">
+                <Label text="Statistiques par statut de rendez-vous" style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+                <PieChart fx:id="pieChartRendezVous" prefHeight="300" prefWidth="600" />
+            </VBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

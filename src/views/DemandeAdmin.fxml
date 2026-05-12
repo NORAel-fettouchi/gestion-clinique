@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.DemandeAdminController" prefWidth="650" prefHeight="500">
+    <Label text="Demandes de Rendez-vous" style="-fx-font-weight: bold; -fx-font-size: 18px;"/>
+
+    <TableView fx:id="tableDemandes" prefHeight="400" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="colPatient" text="Patient" prefWidth="150"/>
+            <TableColumn fx:id="colDate" text="Date" prefWidth="150"/>
+            <TableColumn fx:id="colStatut" text="Statut" prefWidth="100"/>
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>

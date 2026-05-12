@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.shape.Circle?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.PatientDashboardController"
+            stylesheets="@../design/PatientDashboard.css">
+    <left>
+        <VBox fx:id="sidebar" styleClass="sidebar" spacing="10" alignment="TOP_CENTER" prefWidth="220">
+            <padding>
+                <Insets top="30" right="10" bottom="20" left="10"/>
+            </padding>
+            <Label text="Bonjour" styleClass="logo"/>
+            <StackPane alignment="CENTER">
+                <Circle radius="30" styleClass="user-icon"/>
+                <Text fx:id="textInitiale" styleClass="user-initial"/>
+            </StackPane>
+            <Label fx:id="labelNomComplet" styleClass="user-info" />
+            <Label fx:id="labelId" styleClass="user-info" />
+
+
+            <Separator  />
+            <Button fx:id="btnDashboard" text="🏠 Tableau" onAction="#handleDashboard" styleClass="feature-item" maxWidth="Infinity"/>
+            <Button fx:id="btnTraitements" text="💊 Traitements" onAction="#handleTraitementsButtonAction" styleClass="feature-item" maxWidth="Infinity"/>
+            <Button fx:id="btnRendezVous" text="📅 Rendez-vous" onAction="#handleRDVButtonAction" styleClass="feature-item" maxWidth="Infinity"/>
+            <Button fx:id="btnDemanderRdv" text="📩 Demander RDV" onAction="#handleDemanderRdv" styleClass="feature-item" maxWidth="Infinity"/>
+        </VBox>
+
+    </left>
+    <top>
+        <HBox spacing="10" alignment="CENTER_RIGHT" styleClass="top-bar">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label text="Bonjour, Admin" />
+            <Label text="● En ligne" textFill="green" />
+            <StackPane alignment="CENTER">
+                <Circle radius="12" styleClass="user-icon"/>
+                <Text fx:id="textTopbar" styleClass="user-initial1" />
+            </StackPane>
+
+            <Button fx:id="btnLogout" text="Se déconnecter" styleClass="logout-btn"
+                    onAction="#handleLogout"/>
+        </HBox>
+    </top>
+
+    <!-- Contenu principal -->
+    <center>
+        <VBox fx:id="mainContent" spacing="20" styleClass="main-content">
+            <Label text="Tableau de bord" styleClass="page-title"/>
+
+            <HBox spacing="20" styleClass="dashboard-stats">
+                <VBox styleClass="stat-card">
+                    <Label text="Traitements" styleClass="stat-title"/>
+                    <Label fx:id="lblTotalTraitement" text="0" styleClass="stat-value"/>
+                </VBox>
+                <VBox styleClass="stat-card">
+                    <Label text="Rendez-vous" styleClass="stat-title"/>
+                    <Label fx:id="lblTotalRdv" text="0" styleClass="stat-value"/>
+                </VBox>
+            </HBox>
+
+            <TableView fx:id="tableRendezVous" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colDateRdv" text="Date" prefWidth="520" />
+                    <TableColumn fx:id="colStatutRdv" text="Statut" prefWidth="520" />
+                </columns>
+            </TableView>
+            <TableView fx:id="tableTraitements" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colNomTraitement" text="Nom" prefWidth="320" />
+                    <TableColumn fx:id="colDatedebutTraitement" text="Date Début" prefWidth="350" />
+                    <TableColumn fx:id="colDatefinTraitement" text="Date Fin" prefWidth="350" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>
+

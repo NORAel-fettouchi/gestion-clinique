@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.DemanderRendezVousController"
+      spacing="20" styleClass="form-container">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Demander un rendez-vous" styleClass="form-title"/>
+
+    <GridPane hgap="10" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30"/>
+            <ColumnConstraints percentWidth="70"/>
+        </columnConstraints>
+
+        <!-- Spécialité -->
+        <Label text="Spécialité:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboSpecialites" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Médecin -->
+        <Label text="Médecin:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboDoctors" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Date -->
+        <Label text="Date souhaitée:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="datePickerRdv" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- Boutons -->
+        <HBox spacing="10" GridPane.columnSpan="2" GridPane.rowIndex="3"
+              alignment="CENTER_RIGHT">
+            <Button text="Annuler" onAction="#handleAnnuler" styleClass="cancel-btn"/>
+            <Button text="Envoyer" onAction="#handleEnvoyer" styleClass="submit-btn"/>
+        </HBox>
+    </GridPane>
+</VBox>
